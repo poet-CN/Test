@@ -4,39 +4,24 @@
 */
 
 <template>
-  <div>
-    <Test>
-      <p slot="p">abc</p>
-      <span slot="span">def</span>
-      <h1 @click="show=!show">abcabc</h1>
-    </Test>
-    <Test2 :value.sync="doc.title"></Test2>
-    <el-dialog :visible.sync="show">
-      <div slot="title">
-        我是标题
-      </div>
-      abcabc
-      <div slot="footer">
-        <el-button @click="show=!show">关闭</el-button>
-      </div>
-    </el-dialog>
+  <div class="c-lh40">
+    <div>
+      <p>Tests</p>
+    </div>
+    <div>
+      <router-link :to="{name: 'test1'}">Go To Test1: slot</router-link>
+    </div>
+    <div>
+      <router-link :to="{name: 'test2'}">Go To Test2: .sync && :update</router-link>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   name: 'Home',
-  components: {
-    Test: () => import('../components/Test'),
-    Test2: () => import('../components/Test2'),
-  },
   data() {
-    return {
-      show: false,
-      doc: {
-        title: '',
-      },
-    };
+    return {};
   },
   methods: {},
   created() {
@@ -46,5 +31,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  * {
+    padding: 0;
+    margin: 0;
+  }
 
+  .c-lh40 {
+    div {
+      line-height: 40px;
+    }
+  }
 </style>

@@ -4,21 +4,21 @@
 */
 
 <template>
-<el-input v-model="title"></el-input>
+  <child1 :value.sync="doc.title"></child1>
 </template>
 
 <script>
 export default {
   name: 'Test2',
+  components: {
+    child1: () => import('./component/child1'),
+  },
   data() {
     return {
-      title: '',
+      doc: {
+        title: '',
+      },
     };
-  },
-  watch: {
-    title(nv) {
-      this.$emit('update:value', nv);
-    },
   },
   methods: {
 

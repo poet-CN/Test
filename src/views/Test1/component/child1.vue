@@ -1,3 +1,8 @@
+/*
+* author: mamingyang@baofeng.com
+* date: 2018/10/31
+*/
+
 <template>
   <div>
     <slot name="p"></slot>
@@ -8,14 +13,21 @@
 
 <script>
 export default {
-  name: 'Test',
+  name: 'child1',
   data() {
-    return {};
+    return {
+
+    };
+  },
+  methods: {
+
+  },
+  created() {
+
   },
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 
 </style>
