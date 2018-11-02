@@ -14,6 +14,9 @@
     <div>
       <router-link :to="{name: 'test2'}">Go To Test2: .sync && :update</router-link>
     </div>
+    <div>
+      <router-link :to="{name: 'test3'}">Go To Test3: Vuex</router-link>
+    </div>
   </div>
 </template>
 

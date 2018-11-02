@@ -20,5 +20,10 @@ export default new Router({
       name: 'test2',
       component: () => import('@/views/Test2'),
     },
+    {
+      path: '/test3',
+      name: 'test3',
+      component: () => import('@/views/Test3'),
+    },
   ],
 });
