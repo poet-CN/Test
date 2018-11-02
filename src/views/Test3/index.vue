@@ -7,7 +7,7 @@
   <div class="lh60 w600">
     <div>
       <a class="tdu cp mr20" @click="resetData">点此清除数据</a>
-      <a class="tdu cp mr20" @click="readonly = !readonly">点此将输入框设为/取消只读</a>
+      <a class="tdu cp mr20" @click="readonly = !readonly">点此将输入框{{readonly?'取消':'设为'}}只读</a>
     </div>
     <div>
       vuex里的数据：<span class="cRed" v-text="data"></span>
