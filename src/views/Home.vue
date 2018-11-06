@@ -17,6 +17,9 @@
     <div>
       <router-link :to="{name: 'test3'}">Go To Test3: Vuex</router-link>
     </div>
+    <div>
+      <router-link :to="{name: 'test4'}">Go To Test4: ali-player</router-link>
+    </div>
   </div>
 </template>
 
