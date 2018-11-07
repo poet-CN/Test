@@ -1,10 +1,16 @@
 <template>
+  <el-container direction="horizontal">
+    <sidebar/>
     <router-view/>
+  </el-container>
 </template>
 
 <script>
 export default {
   name: 'App',
+  components: {
+    sidebar: () => import('./components/sidebar'),
+  },
 };
 </script>
 

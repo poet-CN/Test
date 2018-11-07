@@ -5,21 +5,7 @@
 
 <template>
   <div class="c-lh40">
-    <div>
-      <p>Tests</p>
-    </div>
-    <div>
-      <router-link :to="{name: 'test1'}">Go To Test1: slot</router-link>
-    </div>
-    <div>
-      <router-link :to="{name: 'test2'}">Go To Test2: .sync && :update</router-link>
-    </div>
-    <div>
-      <router-link :to="{name: 'test3'}">Go To Test3: Vuex</router-link>
-    </div>
-    <div>
-      <router-link :to="{name: 'test4'}">Go To Test4: ali-player</router-link>
-    </div>
+    I am home.
   </div>
 </template>
 
@@ -46,5 +32,9 @@ export default {
     div {
       line-height: 40px;
     }
+  }
+
+  .mb50 {
+    margin-bottom: 50px;
   }
 </style>

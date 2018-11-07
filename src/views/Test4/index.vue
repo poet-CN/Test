@@ -1,17 +1,18 @@
 /*
 * author: mamingyang@baofeng.com
 * date: 2018/11/6
+* attention: 运行前需打开index.html中的注释
 */
 
 <template>
   <div>
+    <el-alert
+      v-if="errorTip"
+      title="运行此test前需清除index.html中关于于阿里js和css的注释"
+      type="error"
+      center
+      :closable="false"></el-alert>
     <div id="J_prismPlayer" class="prism-player"></div>
-    <!--<Player-->
-      <!--v-if="vid && playAuth"-->
-      <!--width="800px"-->
-      <!--height="600px"-->
-      <!--:vid="vid"-->
-      <!--:playauth="playAuth"></Player>-->
   </div>
 </template>
 
@@ -22,8 +23,7 @@ export default {
   name: 'index',
   data() {
     return {
-      vid: '',
-      playAuth: '',
+      errorTip: false,
     };
   },
   methods: {
@@ -32,7 +32,7 @@ export default {
         videoId,
       }).then((res) => {
         try {
-          new Aliplayer({
+          new Aliplayer({ // eslint-disable-line
             id: 'J_prismPlayer',
             width: '800px',
             autoplay: false,
@@ -40,7 +40,7 @@ export default {
             playauth: res.data.data,
           });
         } catch (e) {
-          console.log(e);
+          this.errorTip = true;
         }
       });
     },

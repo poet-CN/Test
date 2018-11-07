@@ -30,5 +30,23 @@ export default new Router({
       name: 'test4',
       component: () => import('@/views/Test4'),
     },
+    {
+      path: '/test5',
+      name: 'test5',
+      component: () => import('@/views/Test5'),
+      children: [{
+        path: '/test5/nav1',
+        name: 'test5-nav1',
+        component: () => import('@/views/Test5/components/nav1'),
+      }, {
+        path: '/test5/nav2',
+        name: 'test5-nav2',
+        component: () => import('@/views/Test5/components/nav2'),
+      }, {
+        path: '/test5/nav3',
+        name: 'test5-nav3',
+        component: () => import('@/views/Test5/components/nav3'),
+      }],
+    },
   ],
 });
