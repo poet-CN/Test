@@ -12,10 +12,12 @@
       <div slot="title">你可以任意改变input的值，但切换路由后他们仍会保留。</div>
     </el-alert>
     <p>当前路由：{{$route.path}}</p>
-    <router-link :to="{name: 'test5'}">test5</router-link>
-    <router-link :to="{name: 'test5-nav1'}">nav1</router-link>
-    <router-link :to="{name: 'test5-nav2'}">nav2</router-link>
-    <router-link :to="{name: 'test5-nav3'}">nav3</router-link>
+    <div class="mb20">
+      <router-link :to="{name: 'test5'}">test5</router-link>
+      <router-link :to="{name: 'test5-nav1'}">nav1</router-link>
+      <router-link :to="{name: 'test5-nav2'}">nav2</router-link>
+      <router-link :to="{name: 'test5-nav3'}">nav3</router-link>
+    </div>
     <keep-alive>
       <router-view></router-view>
     </keep-alive>

@@ -5,7 +5,7 @@
 
 <template>
 <div>
-  <el-input v-model="text"></el-input>
+  <el-input class="mb20" v-model="text"></el-input>
   <el-button @click="text=''">点我清空text</el-button>
   <p v-text="text"></p>
 </div>
