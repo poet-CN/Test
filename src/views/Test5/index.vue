@@ -13,6 +13,7 @@
     </el-alert>
     <p>当前路由：{{$route.path}}</p>
     <div class="mb20">
+      <p class="mb20">案例A：</p>
       <router-link :to="{name: 'test5'}">test5</router-link>
       <router-link :to="{name: 'test5-nav1'}">nav1</router-link>
       <router-link :to="{name: 'test5-nav2'}">nav2</router-link>
