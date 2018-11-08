@@ -12,25 +12,53 @@
       <div slot="title">你可以任意改变input的值，但切换路由后他们仍会保留。</div>
     </el-alert>
     <p>当前路由：{{$route.path}}</p>
-    <div class="mb20">
-      <p class="mb20">案例A：</p>
-      <router-link :to="{name: 'test5'}">test5</router-link>
-      <router-link :to="{name: 'test5-nav1'}">nav1</router-link>
-      <router-link :to="{name: 'test5-nav2'}">nav2</router-link>
-      <router-link :to="{name: 'test5-nav3'}">nav3</router-link>
+    <div class="df">
+      <div class="f1 mr10">
+        <div class="mb20">
+          <p class="mb20">案例A：router-view</p>
+          <div>
+            <router-link :to="{name: 'test5'}">test5</router-link>
+            <router-link :to="{name: 'test5-nav1'}">nav1</router-link>
+            <router-link :to="{name: 'test5-nav2'}">nav2</router-link>
+            <router-link :to="{name: 'test5-nav3'}">nav3</router-link>
+          </div>
+        </div>
+        <keep-alive>
+          <router-view></router-view>
+        </keep-alive>
+      </div>
+      <div class="f1">
+        <div>
+          <div class="mb20">
+            <p class="mb20">案例B：v-if</p>
+            <div>
+              <a class="cp tdu" @click.stop="show=true">show input1</a>
+              <a class="cp tdu" @click.stop="show=false">show input2</a>
+            </div>
+          </div>
+          <div>
+            <keep-alive>
+              <input1 v-if="show"></input1>
+              <input2 v-else></input2>
+            </keep-alive>
+          </div>
+        </div>
+      </div>
     </div>
-    <keep-alive>
-      <router-view></router-view>
-    </keep-alive>
   </div>
 </template>
 
 <script>
 export default {
   name: 'test5',
-  components: {},
+  components: {
+    input1: () => import('./components/input1'),
+    input2: () => import('./components/input2'),
+  },
   data() {
-    return {};
+    return {
+      show: 'a',
+    };
   },
   methods: {},
   mounted() {
