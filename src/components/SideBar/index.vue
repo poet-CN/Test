@@ -20,7 +20,7 @@
 
 <script>
 export default {
-  name: 'sidebar',
+  name: 'SideBar',
   data() {
     return {
       isCollapse: false,
