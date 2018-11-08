@@ -47,6 +47,10 @@ export default new Router({
         name: 'test5-nav3',
         component: () => import('@/views/Test5/components/nav3'),
       }],
+    }, {
+      path: '*',
+      name: 'NotFound',
+      component: () => import('@/views/NotFound'),
     },
   ],
 });

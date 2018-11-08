@@ -1,6 +1,6 @@
 <template>
   <el-container direction="horizontal">
-    <sidebar/>
+    <SideBar/>
     <router-view/>
   </el-container>
 </template>
@@ -9,12 +9,16 @@
 export default {
   name: 'App',
   components: {
-    sidebar: () => import('./components/sidebar'),
+    SideBar: () => import('./components/SideBar'),
   },
 };
 </script>
 
 <style lang="scss">
+  body {
+    font-size: 14px;
+  }
+
   .w600 {
     width: 600px;
   }
