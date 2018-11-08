@@ -4,14 +4,25 @@
 */
 
 <template>
-  <div>
-    <div class="mb50">
-      <child1 :value.sync="doc.title"></child1>
-      <p v-text="doc.title"></p>
+  <div class="w600">
+    <el-alert class="mb10" title="test2" :closable="false" center>
+      <div slot="title">
+        这个案例是关于父子组件数据流传递的方法。
+      </div>
+    </el-alert>
+    <div class="mb20">
+      <p>案例A：</p>
+      <div class="df">
+        <child1 class="mr20" style="flex: 1;" :value.sync="doc.title"></child1>
+        <p style="flex: 2;" v-text="doc.title"></p>
+      </div>
     </div>
-    <div class="mb50">
-      <child2 :show.sync="show" />
-      <el-button @click="show=true">打开modal</el-button>
+    <div>
+      <p>案例B：</p>
+      <div class="mb20">
+        <child2 :show.sync="show" />
+        <el-button @click="show=true">打开modal</el-button>
+      </div>
     </div>
   </div>
 </template>

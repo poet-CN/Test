@@ -4,7 +4,12 @@
 */
 
 <template>
-  <div class="lh60 w600">
+  <div class="lh40 w600">
+    <el-alert class="mb10" title="test3" :closable="false" center>
+      <div slot="title">
+        这个案例是关于vuex的用法。
+      </div>
+    </el-alert>
     <div>
       <a class="tdu cp mr20" @click="resetData">点此清除数据</a>
       <a class="tdu cp mr20" @click="readonly = !readonly">点此将输入框{{readonly?'取消':'设为'}}只读</a>

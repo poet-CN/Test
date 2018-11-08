@@ -1,14 +1,18 @@
 /*
 * author: mamingyang@baofeng.com
 * date: 2018/11/6
-* attention: 运行前需打开index.html中的注释
 */
 
 <template>
-  <div>
+  <div class="w600">
+    <el-alert class="mb10" title="test4" :closable="false" center>
+      <div slot="title">
+        这个案例是关于阿里云H5播放器的用法。
+      </div>
+    </el-alert>
     <el-alert
       v-if="errorTip"
-      title="运行此test前需清除index.html中关于于阿里js和css的注释"
+      title="运行此test前需清除index.html中关于于阿里js和css的注释。"
       type="error"
       center
       :closable="false"></el-alert>
@@ -54,6 +58,6 @@ export default {
 <style lang="scss" scoped>
   .prism-player {
     position: relative;
-    width: 800px;
+    width: 600px;
   }
 </style>

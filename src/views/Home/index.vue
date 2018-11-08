@@ -4,8 +4,15 @@
 */
 
 <template>
-  <div class="c-lh40">
-    I am home.
+  <div class="w600">
+    <el-alert class="mb10" title="home" :closable="false" center>
+      <div slot="title">
+        这是Home页。
+      </div>
+    </el-alert>
+    <div class="lh40">
+      I am home.
+    </div>
   </div>
 </template>
 
@@ -23,18 +30,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  * {
-    padding: 0;
-    margin: 0;
-  }
 
-  .c-lh40 {
-    div {
-      line-height: 40px;
-    }
-  }
-
-  .mb50 {
-    margin-bottom: 50px;
-  }
 </style>

@@ -4,8 +4,13 @@
 */
 
 <template>
-  <div>
-    <p>这个组件是keep-alive</p>
+  <div class="w600">
+    <el-alert class="mb10" title="test5" :closable="false" center>
+      <div slot="title">这个案例是关于keep-alive的用法。</div>
+    </el-alert>
+    <el-alert title="test5" :closable="false" center>
+      <div slot="title">你可以任意改变input的值，但切换路由后他们仍会保留。</div>
+    </el-alert>
     <p>当前路由：{{$route.path}}</p>
     <router-link :to="{name: 'test5'}">test5</router-link>
     <router-link :to="{name: 'test5-nav1'}">nav1</router-link>
