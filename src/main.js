@@ -17,7 +17,9 @@ Vue.config.productionTip = false;
 
 router.beforeEach((to, from, next) => {
   NProgress.start();
-  next();
+  setTimeout(() => {
+    next();
+  }, 700);
 });
 
 router.afterEach(() => {

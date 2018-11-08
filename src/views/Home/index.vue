@@ -10,9 +10,7 @@
         这是Home页。
       </div>
     </el-alert>
-    <div class="lh40">
-      I am home.
-    </div>
+    <img src="../../assets/img/home.png" alt="加载失败">
   </div>
 </template>
 
@@ -30,5 +28,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+  img {
+    display: block;
+    margin: 50px auto 0;
+  }
 </style>
