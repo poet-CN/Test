@@ -5,9 +5,13 @@
 
 <template>
   <div>
-    <slot name="p"></slot>
-    <slot></slot>
-    <slot name="span"></slot>
+    <slot name="title">
+      <p>我是title的默认值</p>
+    </slot>
+    <div class="cRed">
+      <slot></slot>
+    </div>
+    <slot name="bottom"></slot>
   </div>
 </template>
 

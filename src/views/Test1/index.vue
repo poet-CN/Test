@@ -1,8 +1,8 @@
 <template>
   <child1>
-    <p slot="p">abc</p>
-    <span slot="span">def</span>
-    <h1>abcabc</h1>
+    <p slot="title">如果不提供slot，展示的会是组件中的默认值或空</p>
+    <span slot="bottom">在调用时可以随便写顺序，但是顺序只会以组件中排序为准</span>
+    <p>不具名的slot</p>
   </child1>
 </template>
 
