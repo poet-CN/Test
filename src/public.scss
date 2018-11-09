@@ -11,8 +11,16 @@ body {
   flex: 1;
 }
 
+.fz50 {
+  font-size: 50px;
+}
+
 .w600 {
   width: 600px;
+}
+
+.h300 {
+  height: 300px;
 }
 
 .mb10 {
@@ -35,6 +43,37 @@ body {
   margin-bottom: 50px;
 }
 
+.bgWhite {
+  background-color: #fff;
+}
+
+.bgGray {
+  background-color: #F4F4F4;
+}
+
+.bgFc {
+  background-color: #FCFCFC;
+}
+
+.bgF5 {
+  background-color: #F5F5F5;
+}
+
+.bgBlue {
+  background-color: #508EF8;
+}
+
+.bgEd {
+  background-color: #ededed;
+}
+
+.bgYel {
+  background-color: #ffff00;
+}
+
+.bgRed {
+  background-color: #ff0000;
+}
 
 .cRed {
   color: #ff0000;
@@ -50,6 +89,10 @@ body {
 
 .lh60 {
   line-height: 60px;
+}
+
+.lh300 {
+  line-height: 300px;
 }
 
 .tdu {

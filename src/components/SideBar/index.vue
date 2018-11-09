@@ -4,7 +4,7 @@
 */
 
 <template>
-<div style="margin-right: 20px;">
+<div class="wrapper">
   <el-radio-group v-model="isCollapse" style="">
     <el-radio-button :label="false">展开</el-radio-button>
     <el-radio-button :label="true">收起</el-radio-button>
@@ -48,6 +48,10 @@ export default {
         link: '/test5',
         title: 'Test5: keep-alive',
         icon: 'fa fa-heart-o',
+      }, {
+        link: '/test6',
+        title: 'Test6: Swiper',
+        icon: 'fa fa-picture-o',
       }],
     };
   },
@@ -61,5 +65,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+  .wrapper {
+    width: 250px;
+    margin-right: 40px;
+  }
 </style>
