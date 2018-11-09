@@ -31,7 +31,7 @@ export default {
       }, {
         link: '/test1',
         title: 'Test1: slot',
-        icon: 'fa fa-archive',
+        icon: 'fa fa-exchange',
       }, {
         link: '/test2',
         title: 'Test2: .sync, :update',

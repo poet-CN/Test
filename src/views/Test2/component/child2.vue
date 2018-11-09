@@ -9,11 +9,14 @@
     <el-dialog
       :visible="show"
       @close="$emit('update:show', false)">
+      <div slot="title">
+        <p>标题</p>
+      </div>
       <div>
-        <p>我是内容</p>
-        <div slot="footer" class="dialog-footer">
-          <el-button @click="$emit('update:show', false)">点我关闭模态框</el-button>
-        </div>
+        <p>需要注意的是，在子组件你中使用el-dialog，需要去掉控制是否展示的key中的.sync。</p>
+      </div>
+      <div slot="footer" class="dialog-footer">
+        <el-button type="primary" @click="$emit('update:show', false)">关闭</el-button>
       </div>
     </el-dialog>
   </div>
@@ -34,5 +37,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+  p {
+    margin: 0;
+  }
 </style>

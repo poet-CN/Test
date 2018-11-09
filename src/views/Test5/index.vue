@@ -8,16 +8,17 @@
     <el-alert class="mb10" title="test5" :closable="false" center>
       <div slot="title">这个案例是关于keep-alive的用法。</div>
     </el-alert>
-    <el-alert title="test5" :closable="false" center>
+    <el-alert class="mb10" title="test5" :closable="false" center>
       <div slot="title">你可以任意改变input的值，但切换路由后他们仍会保留。</div>
     </el-alert>
-    <p>当前路由：{{$route.path}}</p>
+    <el-alert title="test5" :closable="false" center>
+      <div slot="title">在缓存状态下，该页面的方法仍会持续正常运行。</div>
+    </el-alert>
     <div class="df">
       <div class="f1 mr10">
         <div class="mb20">
-          <p class="mb20">案例A：router-view</p>
+          <p class="mb20">案例A：router-view路由切换</p>
           <div>
-            <router-link :to="{name: 'test5'}">test5</router-link>
             <router-link :to="{name: 'test5-nav1'}">nav1</router-link>
             <router-link :to="{name: 'test5-nav2'}">nav2</router-link>
             <router-link :to="{name: 'test5-nav3'}">nav3</router-link>
@@ -30,7 +31,7 @@
       <div class="f1">
         <div>
           <div class="mb20">
-            <p class="mb20">案例B：v-if</p>
+            <p class="mb20">案例B：v-if组件切换</p>
             <div>
               <a class="cp tdu" @click.stop="show=true">show input1</a>
               <a class="cp tdu" @click.stop="show=false">show input2</a>

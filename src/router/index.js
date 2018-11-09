@@ -33,6 +33,7 @@ const router = new Router({
     {
       path: '/test5',
       name: 'test5',
+      redirect: '/test5/nav1',
       component: () => import('@/views/Test5'),
       children: [{
         path: '/test5/nav1',
