@@ -61,7 +61,7 @@ const router = new Router({
         name: 'Destructuring',
         component: () => import('@/views/Test7/components/Destructuring'),
       }],
-    },  {
+    }, {
       path: '*',
       name: 'NotFound',
       component: () => import('@/views/NotFound'),
