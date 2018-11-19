@@ -9,7 +9,7 @@
     <el-radio-button :label="false">展开</el-radio-button>
     <el-radio-button :label="true">收起</el-radio-button>
   </el-radio-group>
-<el-menu router :collapse="isCollapse" :default-active="$route.path">
+<el-menu router :collapse="isCollapse" :default-active="`/${$route.path.split('/')[1]}`">
   <el-menu-item v-for="(item, index) in list" :key="index" :index="item.link">
     <i v-show="item.icon" :class="[item.icon, 'fa-lg']" style="margin-right: 5px;" aria-hidden="true"></i>
     <span slot="title" v-text="item.title"></span>
@@ -52,6 +52,10 @@ export default {
         link: '/test6',
         title: 'Test6: Swiper',
         icon: 'fa fa-picture-o',
+      }, {
+        link: '/test7',
+        title: 'Test7: ES6',
+        icon: 'fa fa-language',
       }],
     };
   },

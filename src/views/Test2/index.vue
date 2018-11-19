@@ -34,14 +34,12 @@ export default {
     child1: () => import('./component/child1'),
     child2: () => import('./component/child2'),
   },
-  data() {
-    return {
-      doc: {
-        title: '',
-      },
-      show: false,
-    };
-  },
+  data: () => ({
+    doc: {
+      title: '',
+    },
+    show: false,
+  }),
   methods: {
 
   },

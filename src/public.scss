@@ -3,12 +3,43 @@ body {
   font-size: 14px;
 }
 
+a {
+  text-decoration: none;
+}
+
+pre {
+  margin: 0;
+  white-space: pre-line;
+}
+
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+}
+
+.clearfix:after {
+  clear: both
+}
+
 .df {
   display: flex;
 }
 
 .f1 {
   flex: 1;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.p0 {
+  padding: 0;
 }
 
 .fz50 {
@@ -105,4 +136,8 @@ body {
 
 .cp {
   cursor: pointer;
+}
+
+.bb1 {
+  border-bottom: 1px solid #ccc;
 }
