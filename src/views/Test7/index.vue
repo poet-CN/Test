@@ -22,6 +22,12 @@ export default {
     list: [{
       name: 'Destructuring',
       title: '解构赋值',
+    }, {
+      name: 'String',
+      title: '字符串',
+    }, {
+      name: 'Class',
+      title: '类',
     }],
   }),
   methods: {},

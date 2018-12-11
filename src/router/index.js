@@ -57,9 +57,17 @@ const router = new Router({
       name: 'test7',
       component: () => import('@/views/Test7'),
       children: [{
-        path: '/test7/Destructuring',
+        path: '/test7/destructuring',
         name: 'Destructuring',
         component: () => import('@/views/Test7/components/Destructuring'),
+      }, {
+        path: '/test7/string',
+        name: 'String',
+        component: () => import('@/views/Test7/components/String'),
+      }, {
+        path: '/test7/class',
+        name: 'Class',
+        component: () => import('@/views/Test7/components/Class'),
       }],
     }, {
       path: '*',
