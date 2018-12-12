@@ -49,5 +49,6 @@ module.exports = {
     'max-len': 0,
     'no-console': 0,
     'no-plusplus': 0,
+    'no-restricted-syntax': 0,
   }
 }

@@ -4,7 +4,7 @@
 */
 
 <template>
-  <div class="w600">
+  <div class="w750">
     <el-alert class="mb10" title="home" :closable="false" center>
       <div slot="title">
         这是Home页。

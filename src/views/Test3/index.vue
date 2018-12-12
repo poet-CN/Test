@@ -4,7 +4,7 @@
 */
 
 <template>
-  <div class="lh40 w600">
+  <div class="lh40 w750">
     <el-alert class="mb10" title="test3" :closable="false" center>
       <div slot="title">
         这个案例是关于vuex的用法。

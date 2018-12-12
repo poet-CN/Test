@@ -56,7 +56,12 @@ const router = new Router({
       path: '/test7',
       name: 'test7',
       component: () => import('@/views/Test7'),
+      redirect: { name: 'Test7Home' },
       children: [{
+        path: '/test7/index',
+        name: 'Test7Home',
+        component: () => import('@/views/Test7/components/index'),
+      }, {
         path: '/test7/destructuring',
         name: 'Destructuring',
         component: () => import('@/views/Test7/components/Destructuring'),
@@ -68,6 +73,10 @@ const router = new Router({
         path: '/test7/class',
         name: 'Class',
         component: () => import('@/views/Test7/components/Class'),
+      }, {
+        path: '/test7/iterator-generator',
+        name: 'IteratorGenerator',
+        component: () => import('@/views/Test7/components/IteratorGenerator'),
       }],
     }, {
       path: '*',

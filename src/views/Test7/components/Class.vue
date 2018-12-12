@@ -33,6 +33,7 @@ export default {
     },
   },
   created() {
+    this.$emit('update:title', '类');
     this.init();
   },
 };

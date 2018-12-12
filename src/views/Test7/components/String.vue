@@ -23,6 +23,7 @@ export default {
       console.log(msg);
     },
     initDsl(literals, ...substitutions) {
+      // 两个元素都是数组类型。感觉这个方法用的不多。
       console.log(literals); // 占位前的字符串，占位符之间的字符串，占位符后的字符串。若刚开始就是占位符，第一个元素返空。结尾亦然。
       console.log(substitutions); // 各变量
       let a = '';
@@ -40,6 +41,7 @@ export default {
     },
   },
   created() {
+    this.$emit('update:title', '字符串');
     this.testDsl1();
     this.testDsl2();
   },

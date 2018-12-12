@@ -4,7 +4,7 @@
 */
 
 <template>
-  <div class="w600">
+  <div class="w750">
     <el-alert class="mb10" title="test2" :closable="false" center>
       <div slot="title">
         这个案例是关于父子组件数据流传递的方法。

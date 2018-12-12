@@ -183,7 +183,7 @@ export default {
     },
   },
   mounted() {
-
+    this.$emit('update:title', '结构赋值');
   },
 };
 </script>
@@ -191,7 +191,7 @@ export default {
 <style lang="scss" scoped>
   .wrapper {
     box-sizing: border-box;
-    width: 295px;
+    width: 370px;
     margin-bottom: 10px;
     &:nth-child(odd) {
       margin-right: 10px;
