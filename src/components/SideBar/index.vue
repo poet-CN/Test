@@ -56,6 +56,10 @@ export default {
         link: '/test7',
         title: 'Test7: ES6',
         icon: 'fa fa-language',
+      }, {
+        link: '/test8',
+        title: 'Test8: 改vue写setState',
+        icon: 'fa fa-viacoin',
       }],
     };
   },

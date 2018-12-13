@@ -79,6 +79,10 @@ const router = new Router({
         component: () => import('@/views/Test7/components/IteratorGenerator'),
       }],
     }, {
+      path: '/test8',
+      name: 'test8',
+      component: () => import('@/views/Test8'),
+    }, {
       path: '*',
       name: 'NotFound',
       component: () => import('@/views/NotFound'),
