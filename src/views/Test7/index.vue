@@ -5,7 +5,7 @@
 
 <template>
   <div class="w750">
-    <el-alert class="mb10" title="test5" :closable="false" center>
+    <el-alert class="mb10" title="" :closable="false" center>
       <div slot="title">当前案例：{{title || '主页'}}</div>
     </el-alert>
     <div class="bb1 lh40 mb10">
@@ -21,6 +21,9 @@ export default {
   data: () => ({
     title: '',
     list: [{
+      name: 'Switches',
+      title: 'switch的一个神奇的用法',
+    }, {
       name: 'Destructuring',
       title: '解构赋值',
     }, {

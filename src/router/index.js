@@ -62,6 +62,10 @@ const router = new Router({
         name: 'Test7Home',
         component: () => import('@/views/Test7/components/index'),
       }, {
+        path: '/test7/switch',
+        name: 'Switches',
+        component: () => import('@/views/Test7/components/Switches'),
+      }, {
         path: '/test7/destructuring',
         name: 'Destructuring',
         component: () => import('@/views/Test7/components/Destructuring'),
@@ -82,6 +86,10 @@ const router = new Router({
       path: '/test8',
       name: 'test8',
       component: () => import('@/views/Test8'),
+    }, {
+      path: '/test9',
+      name: 'test9',
+      component: () => import('@/views/Test9'),
     }, {
       path: '*',
       name: 'NotFound',

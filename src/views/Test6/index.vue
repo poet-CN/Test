@@ -5,7 +5,7 @@
 
 <template>
   <div class="w750">
-    <el-alert class="mb10" title="test5" :closable="false" center>
+    <el-alert class="mb10" title="" :closable="false" center>
       <div slot="title">这个案例是关于vue-awesome-swiper的用法。</div>
     </el-alert>
     <Swiper1>

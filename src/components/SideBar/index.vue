@@ -60,6 +60,10 @@ export default {
         link: '/test8',
         title: 'Test8: 改vue写setState',
         icon: 'fa fa-viacoin',
+      }, {
+        link: '/test9',
+        title: 'Test9: requestAnimationFrame',
+        icon: 'fa fa-ravelry',
       }],
     };
   },
