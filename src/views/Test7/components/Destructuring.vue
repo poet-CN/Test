@@ -183,7 +183,7 @@ export default {
     },
   },
   mounted() {
-    this.$emit('update:title', '结构赋值');
+    this.$emit('update:title', '解构赋值');
   },
 };
 </script>

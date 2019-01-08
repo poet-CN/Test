@@ -49,7 +49,7 @@ export default {
     },
   },
   created() {
-
+    this.$emit('update:title', 'switch');
   },
 };
 </script>

@@ -64,6 +64,10 @@ export default {
         link: '/test9',
         title: 'Test9: requestAnimationFrame',
         icon: 'fa fa-ravelry',
+      }, {
+        link: '/test10',
+        title: 'Test10: ',
+        icon: 'fa fa-ravelry',
       }],
     };
   },

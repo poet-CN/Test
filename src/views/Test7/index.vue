@@ -35,6 +35,9 @@ export default {
     }, {
       name: 'IteratorGenerator',
       title: '迭代器，生成器',
+    }, {
+      name: 'AsyncAwait',
+      title: '异步函数',
     }],
   }),
   methods: {},

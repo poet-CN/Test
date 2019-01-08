@@ -81,6 +81,10 @@ const router = new Router({
         path: '/test7/iterator-generator',
         name: 'IteratorGenerator',
         component: () => import('@/views/Test7/components/IteratorGenerator'),
+      }, {
+        path: '/test7/async-await',
+        name: 'AsyncAwait',
+        component: () => import('@/views/Test7/components/AsyncAwait'),
       }],
     }, {
       path: '/test8',
@@ -90,6 +94,10 @@ const router = new Router({
       path: '/test9',
       name: 'test9',
       component: () => import('@/views/Test9'),
+    }, {
+      path: '/test10',
+      name: 'test10',
+      component: () => import('@/views/Test10'),
     }, {
       path: '*',
       name: 'NotFound',
