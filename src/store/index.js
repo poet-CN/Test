@@ -5,19 +5,16 @@
 
 import Vue from 'vue';
 import Vuex from 'vuex';
-import actions from './actions';
-import mutations from './mutations';
+import global from './global';
+import test3 from './test3';
 
 Vue.use(Vuex);
 
-const state = {
-  data: '',
-};
-
 const store = new Vuex.Store({
-  state,
-  actions,
-  mutations,
+  modules: {
+    global,
+    test3,
+  },
 });
 
 export default store;

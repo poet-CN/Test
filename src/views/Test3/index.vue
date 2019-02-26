@@ -7,7 +7,7 @@
   <div class="lh40 w750">
     <el-alert class="mb10" title="test3" :closable="false" center>
       <div slot="title">
-        这个案例是关于vuex的用法。
+        这个案例是关于vuex的用法，module分割的情况下mapState和mapActions的使用。
       </div>
     </el-alert>
     <div>
@@ -21,16 +21,24 @@
       <p>在这里<span v-if="readonly">并不能</span>输入你想把它改成什么：</p>
       <el-input :disabled="readonly" type="textarea" :rows="2" v-model="text"></el-input>
     </div>
+    <div><p class="cRed" v-text="countter"></p></div>
   </div>
 </template>
 
 <script>
-import { mapState } from 'vuex';
+import { mapState, mapActions } from 'vuex';
 import { Message } from 'element-ui';
 
 export default {
   name: 'Test3',
-  computed: mapState(['data']),
+  computed: {
+    ...mapState('test3', {
+      data: ({ data }) => (data),
+    }),
+    ...mapState('global', {
+      countter: ({ countter }) => (countter),
+    }),
+  },
   data() {
     return {
       text: '',
@@ -42,21 +50,28 @@ export default {
       this.text = nv;
     },
     text(nv) {
-      this.$store.dispatch('setData', nv);
+      this.setData(nv);
     },
   },
   methods: {
+    ...mapActions('test3', ['setData']),
+    ...mapActions('global', ['fetchNum']),
     modifyData() {
-      this.$store.dispatch('setData', '我是数据');
+      this.setData('我是数据');
     },
-    resetData() {
-      this.$store.dispatch('resetData').then(() => {
-        Message.success('已成功清除数据');
+    async resetData() {
+      await this.$store.dispatch({
+        type: 'test3/resetData',
       });
+      Message.success('已成功清除数据');
+      // this.$store.dispatch('test3/resetData').then(() => {
+      //   Message.success('已成功清除数据');
+      // });
     },
   },
   mounted() {
     this.modifyData();
+    this.fetchNum();
   },
 };
 </script>
