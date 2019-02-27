@@ -35,9 +35,7 @@ export default {
     ...mapState('test3', {
       data: ({ data }) => (data),
     }),
-    ...mapState('global', {
-      countter: ({ countter }) => (countter),
-    }),
+    ...mapState('global', ['countter']), // 两种写法
   },
   data() {
     return {
@@ -60,6 +58,7 @@ export default {
       this.setData('我是数据');
     },
     async resetData() {
+      // 两种写法
       await this.$store.dispatch({
         type: 'test3/resetData',
       });
