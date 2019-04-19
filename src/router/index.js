@@ -99,6 +99,10 @@ const router = new Router({
       name: 'test10',
       component: () => import('@/views/Test10'),
     }, {
+      path: '/test11',
+      name: 'test11',
+      component: () => import('@/views/Test11'),
+    }, {
       path: '*',
       name: 'NotFound',
       component: () => import('@/views/NotFound'),

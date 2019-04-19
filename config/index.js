@@ -15,6 +15,9 @@ module.exports = {
     proxyTable: {
       '/apis': {
         target: HOST
+      },
+      'yup': {
+        target: 'http://42.63.19.174:8002'
       }
     },
 

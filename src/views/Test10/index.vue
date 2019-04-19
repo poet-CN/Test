@@ -4,18 +4,14 @@
 */
 
 <template>
-<div></div>
+  <div></div>
 </template>
 
 <script>
 export default {
   name: 'Test10',
-  data: () => ({
-
-  }),
-  methods: {
-
-  },
+  data: () => ({}),
+  methods: {},
   created() {
 
   },
