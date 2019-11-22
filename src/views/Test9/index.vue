@@ -22,6 +22,7 @@ export default {
     top: 20,
     goRight: true,
     goBottom: true,
+    animationFrameId: -1,
   }),
   methods: {
     runAnimate() {
@@ -53,9 +54,9 @@ export default {
             this.minusTop();
           }
         }
-        requestAnimationFrame(draw);
+        this.animationFrameId = requestAnimationFrame(draw);
       };
-      requestAnimationFrame(draw);
+      this.animationFrameId = requestAnimationFrame(draw);
     },
     addLeft() {
       this.left = this.left + 10;
@@ -72,6 +73,9 @@ export default {
   },
   created() {
     this.runAnimate();
+  },
+  destroyed() {
+    cancelAnimationFrame(this.animationFrameId);
   },
 };
 </script>
